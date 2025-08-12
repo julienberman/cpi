@@ -1,47 +1,57 @@
 File: output/data/cpi.csv
 
-MD5 hash: d472eb29a5eb93044ef19e68bebff0ae
+MD5 hash: 515a441b1b7898c573e9d80648ef233e
 
 Keys: year month date latest 
 
-                               type count  unique                           mean                  min                  50%                  max     std
-year                          int64    42     nan                      2,023.286            2,022.000            2,023.000            2,025.000   1.043
-month                        object    42  12.000                            nan                  nan                  nan                  nan     nan
-date                 datetime64[ns]    42     nan  2023-09-16 02:51:25.714285824  2022-01-01 00:00:00  2023-09-16 00:00:00  2025-06-01 00:00:00     nan
-latest                        int64    42     nan                          0.024                0.000                0.000                1.000   0.154
-core                        float64    42     nan                        309.927              286.799              311.024              327.600  12.100
-core_ex_shelter             float64    42     nan                        269.239              255.504              269.529              279.231   6.552
-core_services               float64    42     nan                        400.635              361.843              402.023              431.007  20.994
-cpiu                        float64    42     nan                        306.029              282.542              307.514              321.500  10.561
-energy                      float64    42     nan                        285.777              269.670              282.106              332.281  12.531
-food                        float64    42     nan                        322.100              290.144              324.878              339.498  12.791
-shelter                     float64    42     nan                        383.327              342.914              386.029              414.883  22.282
-core_1m                     float64    41     nan                          3.983                0.681                3.802                8.402   1.662
-core_3m                     float64    39     nan                          3.986                1.695                3.848                7.050   1.358
-core_6m                     float64    36     nan                          3.986                2.588                3.672                6.494   1.135
-core_12m                    float64    30     nan                          3.884                2.767                3.696                5.563   0.898
-core_ex_shelter_1m          float64    41     nan                          2.655               -0.889                2.209                8.515   2.133
-core_ex_shelter_3m          float64    39     nan                          2.606               -0.127                2.429                6.941   1.534
-core_ex_shelter_6m          float64    36     nan                          2.551                1.200                2.341                5.612   1.092
-core_ex_shelter_12m         float64    30     nan                          2.359                1.761                2.151                3.881   0.641
-core_services_1m            float64    41     nan                          5.270                1.288                5.239                9.354   1.931
-core_services_3m            float64    39     nan                          5.300                2.295                5.007                8.449   1.609
-core_services_6m            float64    36     nan                          5.308                3.220                5.187                7.880   1.358
-core_services_12m           float64    30     nan                          5.265                3.534                5.273                7.264   1.061
-cpiu_1m                     float64    41     nan                          3.911               -0.599                3.142               16.699   3.577
-cpiu_3m                     float64    39     nan                          3.751                0.705                3.297               11.009   2.337
-cpiu_6m                     float64    36     nan                          3.575                1.635                3.181                8.969   1.560
-cpiu_12m                    float64    30     nan                          3.360                2.334                3.124                6.340   0.993
-energy_1m                   float64    41     nan                          7.066              -47.430               -2.642              179.726  42.931
-energy_3m                   float64    39     nan                          1.226              -38.227               -6.036               58.713  19.783
-energy_6m                   float64    36     nan                         -1.532              -26.086               -1.076               36.396  10.226
-energy_12m                  float64    30     nan                         -2.658              -16.604               -3.134                8.446   5.079
-food_1m                     float64    41     nan                          4.780               -0.927                3.524               14.206   4.059
-food_3m                     float64    39     nan                          4.607                1.027                2.670               13.682   3.769
-food_6m                     float64    36     nan                          4.374                1.573                2.929               12.748   3.386
-food_12m                    float64    30     nan                          3.790                2.064                2.732               10.091   2.343
-shelter_1m                  float64    41     nan                          5.753                2.130                5.667                9.596   2.027
-shelter_3m                  float64    39     nan                          5.818                3.105                5.797                9.067   1.823
-shelter_6m                  float64    36     nan                          5.886                3.339                5.543                8.893   1.725
-shelter_12m                 float64    30     nan                          5.894                3.822                5.585                8.165   1.469
+                                         type count  unique                           mean                  min                  50%                  max     std
+year                                    int64    42     nan                      2,023.286            2,022.000            2,023.000            2,025.000   1.043
+month                                  object    42  12.000                            nan                  nan                  nan                  nan     nan
+date                           datetime64[ns]    42     nan  2023-09-16 02:51:25.714285824  2022-01-01 00:00:00  2023-09-16 00:00:00  2025-06-01 00:00:00     nan
+latest                                  int64    42     nan                          0.024                0.000                0.000                1.000   0.154
+core                                  float64    42     nan                        309.927              286.799              311.024              327.600  12.100
+core_ex_shelter                       float64    42     nan                        269.239              255.504              269.529              279.231   6.552
+core_ex_shelter_used_cars             float64    42     nan                        273.117              255.401              274.024              284.724   8.143
+core_goods                            float64    42     nan                        165.849              164.072              165.839              168.211   0.992
+core_services                         float64    42     nan                        400.635              361.843              402.023              431.007  20.994
+cpiu                                  float64    42     nan                        306.029              282.542              307.514              321.500  10.561
+energy                                float64    42     nan                        285.777              269.670              282.106              332.281  12.531
+food                                  float64    42     nan                        319.651              288.611              322.438              336.555  12.470
+shelter                               float64    42     nan                        383.327              342.914              386.029              414.883  22.282
+core_1m                               float64    41     nan                          3.983                0.681                3.802                8.402   1.662
+core_3m                               float64    39     nan                          3.986                1.695                3.848                7.050   1.358
+core_6m                               float64    36     nan                          3.986                2.588                3.672                6.494   1.135
+core_12m                              float64    30     nan                          3.884                2.767                3.696                5.563   0.898
+core_ex_shelter_1m                    float64    41     nan                          2.655               -0.889                2.209                8.515   2.133
+core_ex_shelter_3m                    float64    39     nan                          2.606               -0.127                2.429                6.941   1.534
+core_ex_shelter_6m                    float64    36     nan                          2.551                1.200                2.341                5.612   1.092
+core_ex_shelter_12m                   float64    30     nan                          2.359                1.761                2.151                3.881   0.641
+core_ex_shelter_used_cars_1m          float64    41     nan                          3.254               -0.469                3.133                8.750   2.182
+core_ex_shelter_used_cars_3m          float64    39     nan                          3.191                0.580                2.661                7.824   1.794
+core_ex_shelter_used_cars_6m          float64    36     nan                          3.096                1.474                2.719                6.713   1.452
+core_ex_shelter_used_cars_12m         float64    30     nan                          2.906                1.773                2.484                5.447   1.020
+core_goods_1m                         float64    41     nan                          0.399               -4.627                0.029                6.684   2.995
+core_goods_3m                         float64    39     nan                          0.288               -3.291                0.002                4.415   2.059
+core_goods_6m                         float64    36     nan                          0.237               -2.251                0.192                3.107   1.541
+core_goods_12m                        float64    30     nan                         -0.042               -1.788               -0.022                2.044   1.073
+core_services_1m                      float64    41     nan                          5.270                1.288                5.239                9.354   1.931
+core_services_3m                      float64    39     nan                          5.300                2.295                5.007                8.449   1.609
+core_services_6m                      float64    36     nan                          5.308                3.220                5.187                7.880   1.358
+core_services_12m                     float64    30     nan                          5.265                3.534                5.273                7.264   1.061
+cpiu_1m                               float64    41     nan                          3.911               -0.599                3.142               16.699   3.577
+cpiu_3m                               float64    39     nan                          3.751                0.705                3.297               11.009   2.337
+cpiu_6m                               float64    36     nan                          3.575                1.635                3.181                8.969   1.560
+cpiu_12m                              float64    30     nan                          3.360                2.334                3.124                6.340   0.993
+energy_1m                             float64    41     nan                          7.066              -47.430               -2.642              179.726  42.931
+energy_3m                             float64    39     nan                          1.226              -38.227               -6.036               58.713  19.783
+energy_6m                             float64    36     nan                         -1.532              -26.086               -1.076               36.396  10.226
+energy_12m                            float64    30     nan                         -2.658              -16.604               -3.134                8.446   5.079
+food_1m                               float64    41     nan                          4.670               -0.867                3.306               13.566   3.905
+food_3m                               float64    39     nan                          4.501                1.045                2.549               13.099   3.613
+food_6m                               float64    36     nan                          4.281                1.576                2.826               12.310   3.252
+food_12m                              float64    30     nan                          3.727                2.057                2.698                9.827   2.271
+shelter_1m                            float64    41     nan                          5.753                2.130                5.667                9.596   2.027
+shelter_3m                            float64    39     nan                          5.818                3.105                5.797                9.067   1.823
+shelter_6m                            float64    36     nan                          5.886                3.339                5.543                8.893   1.725
+shelter_12m                           float64    30     nan                          5.894                3.822                5.585                8.165   1.469
 
