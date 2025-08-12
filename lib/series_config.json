@@ -1,0 +1,23 @@
+{
+    "sa": {
+        "cpiu": "CUSR0000SA0",
+        "core": "CUSR0000SA0L1E",
+        "core_ex_shelter": "CUSR0000SA0L12E",
+        "core_ex_shelter_used_cars": "CUSR0000SA0L12E4",
+        "core_services": "CUSR0000SASLE",
+        "core_goods": "CUSR0000SACL1E",
+        "food": "CUSR0000SAF", 
+        "energy": "CUSR0000SA0E",
+        "shelter": "CUSR0000SAH1",
+        "apparel": "CUSR0000SAA",
+        "motor_vehicles": "CUSR0000SETA",
+        "transportation": "CUSR0000SAT",
+        "medical_care": "CUSR0000SAM",
+        "medical_commodities": "CUSR0000SAM1",
+        "medical_services": "CUSR0000SAM2",
+        "recreation": "CUSR0000SAR",
+        "recreation_commodities": "CUSR0000SARC",
+        "recreation_services": "CUSR0000SARS"
+    },
+    "nsa": {}
+}
