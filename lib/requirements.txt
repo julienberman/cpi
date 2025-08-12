@@ -1,0 +1,11 @@
+pyyaml
+pandas
+numpy
+matplotlib
+pyjanitor
+ipykernel
+jupyter
+requests
+fredapi
+seaborn
+bls
