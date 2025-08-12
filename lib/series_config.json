@@ -1,6 +1,6 @@
 {
     "sa": {
-        "cpiu": "CUSR0000SA0",
+        "overall": "CUSR0000SA0",
         "core": "CUSR0000SA0L1E",
         "core_ex_shelter": "CUSR0000SA0L12E",
         "core_ex_shelter_used_cars": "CUSR0000SA0L12E4",

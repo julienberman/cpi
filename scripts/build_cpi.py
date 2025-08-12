@@ -4,15 +4,13 @@ import pandas as pd
 import requests
 import janitor
 from lib.save_data import save_data
-from lib.helpers import plot_time_series
 
 def main():
     api_key = get_api_key('lib/api_key.txt')
-    series_map = get_series(series=["cpiu", "core", "core_ex_shelter", "core_ex_shelter_used_cars", "core_services", "core_goods", "food", "energy", "shelter"])
+    series_map = get_series(series=["overall", "core", "core_ex_shelter", "core_ex_shelter_used_cars", "core_services", "core_goods", "food", "energy", "shelter"])
     df = fetch_cpi(api_key, series=series_map)
-    df_annualized_rates = get_annualized_rates(df)
     save_data(
-        df_annualized_rates,
+        df,
         keys = ["year", "month", "date", "latest"],
         out_file = "output/data/cpi.csv",
         log_file = "output/logs/cpi.log",
@@ -34,15 +32,13 @@ def get_series(series=None, seasonal_adjustment=True):
 
 def fetch_cpi(api_key, start_date=None, end_date=None, series={"cpiu": "CUSR0000SA0"}):
     url = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
-    today = dt.date.today()
-    end_date = end_date or f"{today.year}-{today.month:02d}"
-    start_date = start_date or f"{int(end_date[:4]) - 3}-{end_date[5:]}"
-    start_year, start_month = map(int, start_date.split("-"))
-    end_year, end_month = map(int, end_date.split("-"))
+    end_date = pd.to_datetime(end_date) or dt.date.today()
+    start_date = pd.to_datetime(start_date) or end_date - pd.DateOffset(years=3)
+    start_date_init = start_date - pd.DateOffset(years=1)
     params = {
         "seriesid": list(series.values()),
-        "startyear": str(start_year),
-        "endyear": str(end_year),
+        "startyear": str(start_date_init.year),
+        "endyear": str(end_date.year),
         "registrationKey": api_key
     }    
     response = requests.post(url, json=params, timeout=30)
@@ -52,7 +48,9 @@ def fetch_cpi(api_key, start_date=None, end_date=None, series={"cpiu": "CUSR0000
         raise RuntimeError(f"BLS API error: {data}")
     
     df = process_payload(data, series)
-    return df
+    df_annualized_rates = get_annualized_rates(df)
+    df_filtered = df_annualized_rates.query("date >= @start_date and date <= @end_date")
+    return df_filtered
 
 def process_payload(data, series):
     df_list = []

@@ -27,3 +27,5 @@
 *.ipynb*
 *.err
 *.sbatch
+*.csv
+*.png
